@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: configServerMiddleWare
+    env: java
+    buildCommand: ./mvnw install -DskipTests
+    startCommand: java -jar target/*.jar
+    envVars:
+      - key: PORT
+        value: 8888
+      - key: JAVA_VERSION
+        value: 21
